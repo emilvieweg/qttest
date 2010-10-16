@@ -22,9 +22,10 @@ char getWord(int);
 
 int main(int argc, char *argv[])
 {
-    fp = fopen("program.txt", "r");
     int i = 0;
-    table= (struct pageTableElement*)malloc(sizeof(struct pageTableElement)*(400/PAGESIZE));
+
+    fp = fopen("program.txt", "r");
+        table= (struct pageTableElement*)malloc(sizeof(struct pageTableElement)*(400/PAGESIZE));
     for(; i < 100; i++)
     {
         table[i].valid = 0;
